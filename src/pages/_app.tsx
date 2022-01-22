@@ -10,11 +10,11 @@ import { queryCliente } from '../services/queryClient'
 if (process.env.NODE_ENV === 'development') {
   makeServer()
 }
-
 function MyApp({ Component, pageProps }: AppProps) {
+
   return (
     <QueryClientProvider client={queryCliente}>
-      <ChakraProvider theme={theme}>
+      <ChakraProvider theme={theme} >
         <SidebarDrawerProvider>
           <Component {...pageProps} />
         </SidebarDrawerProvider>
